@@ -13,8 +13,8 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/pic.jpg) center center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/pic.jpg) center center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/mainpic.jpg) center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/mainpic.jpg) center top;
   background-size: cover;
 }
 
@@ -135,19 +135,19 @@
           transform: translateY(0);
 }
 
-.nav .menu-nav-item {
+.nav .menu-nav-items {
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.nav .menu-nav-item.open {
+.nav .menu-nav-items.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.nav .menu-nav-item.active > a {
+.nav .menu-nav-items.active > a {
   color: #ff652f;
 }
 
@@ -193,8 +193,8 @@
 .about-bio-image {
   height: 50vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/pic.jpg) center center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/pic.jpg) center center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/mainpic.jpg) center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/mainpic.jpg) center top;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,13 +268,20 @@
 
 .projects {
   padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .projects-bio-image {
-  height: 30vh;
+  height: 50vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/pic.jpg) center center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/pic.jpg) center center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/mainpic.jpg) center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/mainpic.jpg) center top;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,14 +305,12 @@
 
 .projects-items {
   margin: 2rem auto 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  width: 50vh;
+  grid-gap: 2rem;
 }
 
 .projects-item {
@@ -401,8 +406,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/pic.jpg) center center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/pic.jpg) center center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(../images/mainpic.jpg) center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../images/mainpic.jpg) center top;
   background-size: cover;
 }
 
@@ -435,6 +440,71 @@
 .contact .social-icons {
   position: initial;
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav-items {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav-link {
+    font-size: 1.5rem;
+  }
+  .about_bio {
+    font-size: 1.5rem;
+  }
+  .projects-bio-image {
+    height: 40vh;
+  }
+  .projects-items {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+  .contact-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects-items {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    width: 55vw;
+  }
+  .projects-bio-image {
+    height: 70vh;
+  }
+  .contact-list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .about-bio-image {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .projects-bio-image {
+    height: 70vh;
+  }
 }
 
 body {

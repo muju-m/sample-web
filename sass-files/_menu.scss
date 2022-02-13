@@ -68,7 +68,7 @@
         display: flex;
         flex-flow: column wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
         height: 100vh;
         overflow: hidden;
         background: $primary-color;
@@ -81,7 +81,7 @@
             transform: translateY(0);
         }
 
-        &-item {
+        &-items{
             transform: translateX(100vw);
             @include transition-ease;
    
