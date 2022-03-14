@@ -7,13 +7,11 @@
     align-items: center;
 
     background: 
-        linear-gradient(
-            to right,
-            rgba($primary-color, 0.9),
-            rgba($primary-color, 0.3)
-        ),      
-    
-    
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+    ),
     url(../images/mainpic.jpg) center top;
     background-size: cover;
 
