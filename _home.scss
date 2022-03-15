@@ -4,12 +4,12 @@
     overflow: hidden;
     align-items: center;
     text-align: center;
-    background: url('mainpic.jpg') center top,
-        linear-gradient(
-            to right,
-            rgba($primary-color, 0.9),
-            rgba($primary-color, 0.3)
-        );      
+    background: url(mainpic.jpg) center top,  
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+    );      
     background-size: cover;
 
     &-name{

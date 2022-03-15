@@ -4,13 +4,13 @@
     &-bio-image{
         height: 50vh;
         width: 100%;
-        background: url('mainpic.jpg') center top,
+        background-image: 
         linear-gradient(
             to right,
             rgba($primary-color, 0.9),
             rgba($primary-color, 0.3)
-        );
-    
+        ),
+    url("mainpic.jpg") center top;
     background-size: cover;
 
     display: flex;
