@@ -1,6 +1,8 @@
 .about{
     padding-bottom: 2rem;
     overflow: hidden;
+    background-image:url("mainpic.jpg") center top;
+    background-size: cover;
     &-bio-image{
         height: 50vh;
         width: 100%;
@@ -9,9 +11,8 @@
             to right,
             rgba($primary-color, 0.9),
             rgba($primary-color, 0.3)
-        ),
-    url("mainpic.jpg") center top;
-    background-size: cover;
+        );
+  
 
     display: flex;
     flex-direction: column;
